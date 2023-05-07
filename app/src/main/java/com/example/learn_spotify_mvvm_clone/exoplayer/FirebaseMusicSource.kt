@@ -14,7 +14,6 @@ import android.support.v4.media.MediaMetadataCompat.METADATA_KEY_MEDIA_ID
 import android.support.v4.media.MediaMetadataCompat.METADATA_KEY_MEDIA_URI
 import android.support.v4.media.MediaMetadataCompat.METADATA_KEY_TITLE
 import androidx.core.net.toUri
-import com.example.learn_spotify_mvvm_clone.data.di.ServiceModule_ProvideDataSourceFactoryFactory
 import com.example.learn_spotify_mvvm_clone.data.remote.MusicDatabase
 import com.google.android.exoplayer2.MediaItem
 import com.google.android.exoplayer2.source.ConcatenatingMediaSource
