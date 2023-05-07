@@ -9,7 +9,7 @@ import kotlinx.coroutines.tasks.await
 /**
  * Created by AidenChang 2023/05/06
  */
-class MusicDatabase : IDatabase{
+class MusicDatabase : IDatabase {
     private val firestore = Firebase.firestore
     private val songCollection = firestore.collection(SONG_COLLECTION)
 
