@@ -9,6 +9,7 @@ import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.session.MediaSessionCompat
 import androidx.media.MediaBrowserServiceCompat
 import com.example.learn_spotify_mvvm_clone.data.other.Constants.Companion.MEDIA_ROOT_ID
+import com.example.learn_spotify_mvvm_clone.data.other.Constants.Companion.NETWORK_ERROR
 import com.example.learn_spotify_mvvm_clone.exoplayer.callbacks.MusicPlayNotificationListener
 import com.example.learn_spotify_mvvm_clone.exoplayer.callbacks.MusicPlaybackPreparer
 import com.example.learn_spotify_mvvm_clone.exoplayer.callbacks.MusicPlayerEventListener
@@ -160,6 +161,7 @@ class MusicService : MediaBrowserServiceCompat() {
                             preparePlayer(firebaseMusicSource.songs, firebaseMusicSource.songs[0], false)
                             isPlayerInitialized = true
                         } else {
+                            mediaSession.sendSessionEvent(NETWORK_ERROR, null)
                             result.sendResult(null)
                         }
                     }
